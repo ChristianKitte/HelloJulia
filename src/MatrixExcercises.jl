@@ -5,5 +5,10 @@ MatrixExcercises:
 - Date: 2021-05-13
 =#
 
-x = 2 + 1
-print(x)
+# https://juliadocs.github.io/Julia-Cheat-Sheet/
+
+println("Aufageb 1:")
+
+myArray = rand(.0:.0001:1, 2, 4)
+println("Create a 2x4 two dimensional matrix with random floats in it")
+println(myArray)
