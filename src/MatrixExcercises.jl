@@ -6,9 +6,162 @@ MatrixExcercises:
 =#
 
 # https://juliadocs.github.io/Julia-Cheat-Sheet/
+# m x n Matrix ==> m Zeilen und n Spalten
 
-println("Aufageb 1:")
+function Aufgabe1()
+    # 16, damit die Zahlen nicht so lang werden....
+    # 2x4 ==> 2 Zeilen, 4 Spalten
+    myArray = rand(Float16, 2, 4)
+    myArrayMax = findmax(myArray)
 
-myArray = rand(.0:.0001:1, 2, 4)
-println("Create a 2x4 two dimensional matrix with random floats in it")
-println(myArray)
+    println(string("Matrix: ",myArray))
+    println("Das größte Element ist: $myArrayMax")
+
+    # Anzege von Variablen $ scheint hier nicht vernünftig zu arbeiten :(
+    print("Der Wert ist: ")
+    println(myArrayMax[1])
+
+    print("Der Wert befindet sich an: ")
+    println(myArrayMax[2])
+
+    print("Dimension 1: ")
+    println(myArrayMax[2][1])
+
+    print("Dimension 2: ")
+    println(myArrayMax[2][2])
+end
+
+function Aufgabe2()
+    matrixA = [1 2 3; 4 5 6]
+    matrixB = [7 8 9; 10 11 12]
+
+    # Eine etwas gewöhnungsbedürftige Syntax
+    firstWay = try
+        matrixA*matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    secondWay = try
+        matrixA.*matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("Matrix B: ",matrixB))
+    println(string("A * B: ",firstWay))
+    println(string("A .* B: ",secondWay))
+end
+
+function Aufgabe3a()
+    matrixA = [1 2 3; 4 5 6]
+    matrixB = [7 8 9; 10 11 12]
+
+    firstWay = try
+        matrixA / matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    secondWay = try
+        matrixA./matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("Matrix B: ",matrixB))
+    println(string("A / B: ",firstWay))
+    println(string("A ./ B: ",secondWay))
+end
+
+function Aufgabe3b()
+    matrixA = [1 2 3; 4 5 6]
+    matrixB = [7 8 9; 10 11 12]
+
+    firstWay = try
+        matrixA \ matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    secondWay = try
+        matrixA.\matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("Matrix B: ",matrixB))
+    println(string("A \\ B: ",firstWay))
+    println(string("A .\\ B: ",secondWay))
+end
+
+function Aufgabe4()
+    matrixA = [1 2 3; 4 5 6; 7 8 9]
+
+    firstTask = try
+        matrixA + 1
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    secondTask = try
+        matrixA - 1
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    thirdTask = try
+        matrixA * 2
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    fourthTask = try
+        matrixA / 2
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("A + 1: ",firstTask))
+    println(string("A - 1: ",secondTask))
+
+    println(string("A * 2: ",thirdTask))
+    println(string("A / 2: ",fourthTask))
+end
+
+function Aufgabe5()
+    # 3 mal 4 Matrix ==> 3 Zeilen, 4 Spalten
+    matrixA = [1 2 3 4 ; 5 6 7 8 ; 9 10 11 12]
+    zeilenVectorB = [10 20 30]
+    spaltenVectorC = [10; 20; 30; 40]
+
+    firstWay = try
+        zeilenVectorB*matrixA
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    secondWay = try
+        matrixA*spaltenVectorC
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("Vector B: ",vectorB))
+    println(string("Vector C: ",vectorC))
+    println(string("Vector C * Matrix A: ",firstWay))
+    println(string("Matrix A * Vector C: ",secondWay))
+end
+
+Aufgabe1()
+#Aufgabe2()
+#Aufgabe3a()
+#println()
+#Aufgabe3b()
+#Aufgabe4()
+#Aufgabe5()
