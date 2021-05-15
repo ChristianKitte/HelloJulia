@@ -6,19 +6,19 @@ Für die Aufgaben mit Julia arbeite ich mit der PyCharm IDE von Jetbrains und ei
 
 ### Create a 2x4 two dimensional matrix with random floats in it and in the next step determine the biggest element.
 
-Für die Aufgabe habe ich aus Gründen der Übersicht Float 16 verwendet.
-Der größte Werte des Arrays ist 0,8477. Der Wert befindet sich in der Zweiten Reihe in Spalte 1. Da immer erst die Reihe, dann die Spalte genannt wird, ergibt sich (2,1).
+Für die Aufgabe habe ich aus Gründen der Übersicht Float 16 verwendet. Der größte Werte des Arrays ist bei meinem hier notierten Durchlauf 0,8477. Der Wert befindet sich in der Zweiten Reihe in Spalte 1. Da immer erst die Reihe, dann die Spalte genannt wird, ergibt sich (2,1).
 
 ### Now compare matrix multiplication either this way A * B and this way A .* B. Whats the difference?!
 
-Das erste und zweite Ergebnis verdeutlichen, dass die Operation die Matrizen als ganzes multipliziert (Matrizenmultiplikation). Hierfür muss jedoch die Spaltenzahl der ersten Matrix gleich der Anzahl der Reihen der zweiten sein. Folglich gibt die erste Aktion eine Fehlermeldung und die zweite den neuen 23 Vektor zurück.
+Das erste und zweite Ergebnis verdeutlichen, dass die Operation die Matrizen als ganzes multipliziert (Matrizenmultiplikation). Hierfür muss jedoch die Spaltenzahl der ersten Matrix gleich der Anzahl der Reihen der zweiten sein. Folglich gibt die erste Aktion eine Fehlermeldung und die zweite den neuen 2x3 Vektor zurück.
 
-Die Operation A .* B im zweiten Teil der Aufgabe multipliziert die Elemente der Matrix Elementweise. Das Ergebnis zeigt, dass der Zusatz “.” angibt, dass ich Elementweise vorgehen möchte. Dies ist erlaubt, da ich Matrizen faktorisieren kann. Das Ergebnis ist dementsprechend eine 23 Matrix.
-What about matrix division with "/" or "\"?!
+Die Operation A .* B im zweiten Teil der Aufgabe multipliziert die Elemente der Matrix Elementweise. Das Ergebnis zeigt, dass der Zusatz “.” angibt, dass ich Elementweise vorgehen möchte. Dies ist erlaubt, da ich Matrizen faktorisieren kann. Das Ergebnis ist dementsprechend eine 2x3 Matrix.
 
-In dem ersten Teil der Aufgabe führt die Operation A / B zu einem merkwürdigen Verhalten und einer 23 Matrix. Mit Blick auf die Aufgabe 2) würde ich denken, dass versucht wird, die Operation - verbotener Weise - auf die Matrizen als solche anzuwenden. 
+### What about matrix division with "/" or "\"?!
 
-Die Operation A ./ B hat jedoch zur Folge, dass die Elemente von A mit den entsprechenden Elementen von B dividiert werden. Dies führt entsprechend wieder zu einer 23 Matrix.
+In dem ersten Teil der Aufgabe führt die Operation A / B zu einem merkwürdigen Verhalten und einer 2x3 Matrix. Mit Blick auf die Aufgabe 2) würde ich denken, dass versucht wird, die Operation - verbotener Weise - auf die Matrizen als solche anzuwenden. 
+
+Die Operation A ./ B hat jedoch zur Folge, dass die Elemente von A mit den entsprechenden Elementen von B dividiert werden. Dies führt entsprechend wieder zu einer 2x3 Matrix.
 
 Der zweite Teil der Aufgabe verhält sich analog zum ersten Teil, jedoch umgekehrt. Die Elemente von B werden durch die Entsprechenden Gegenstücke in Matrix A dividiert.
 
