@@ -34,10 +34,17 @@ end
 function Aufgabe2()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
+    matrixC = [7 8 9; 10 11 12; 13 14 15]
 
     # Eine etwas gewöhnungsbedürftige Syntax
-    firstWay = try
+    firstWayA = try
         matrixA*matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    firstWayB = try
+        matrixA*matrixC
     catch fehler
         string("Es kam zu einem Fehler: ",fehler)
     end
@@ -50,7 +57,9 @@ function Aufgabe2()
 
     println(string("Matrix A: ",matrixA))
     println(string("Matrix B: ",matrixB))
-    println(string("A * B: ",firstWay))
+    println(string("Matrix C: ",matrixC))
+    println(string("A * B: ",firstWayA))
+    println(string("A * C: ",firstWayB))
     println(string("A .* B: ",secondWay))
 end
 
@@ -158,10 +167,10 @@ function Aufgabe5()
     println(string("Matrix A * Vector C: ",secondWay))
 end
 
-Aufgabe1()
+#Aufgabe1()
 #Aufgabe2()
 #Aufgabe3a()
 #println()
 #Aufgabe3b()
 #Aufgabe4()
-#Aufgabe5()
+Aufgabe5()
