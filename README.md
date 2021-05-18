@@ -38,7 +38,7 @@ Bei der Multiplikation und Division zeigt sich jedoch ein anderes Verhalten. Hie
 
 ### Now multiply a 3x4 matrix with a suitable (4)vector. (Exercise 4)
 
-Bei dieser Aufgabe existieren eigentlich zwei grundlegende Möglichkeiten. Bei basieren auf die Notwendigkeit, das die Anzahl der Spalten gleich der Anzahl der Reihen sein muss.
+Bei dieser Aufgabe existieren eigentlich zwei grundlegende Möglichkeiten. Beide basieren auf die Notwendigkeit, das die Anzahl der Spalten gleich der Anzahl der Reihen sein muss.
 
 Je nachdem, ob ich mit einem Spalten- oder Zeilenvektor arbeite, ergeben sich zwei Möglichkeiten, einen geeigneten Vektor zu definieren. Mein Vektor B ist ein Zeilenvektor, C hingegen ein Spaltenvektor. Der Unterschied zeigt sich in der Bebilderung am Ende der Aufgabe 5 sowie der Definition in Julia.
 
