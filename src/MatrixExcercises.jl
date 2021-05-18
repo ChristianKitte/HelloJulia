@@ -12,8 +12,8 @@ MatrixExcercises:
 #
 # m x n Matrix ==> m Zeilen und n Spalten
 
-# Lösung der ersten Aufgabe
-function Aufgabe1()
+# Lösung der Aufgabe aus Exercise 3
+function AufgabeExercise3()
     # 16, damit die Zahlen nicht so lang werden....
     # 2x4 ==> 2 Zeilen, 4 Spalten
     myArray = rand(Float16, 2, 4)
@@ -36,13 +36,36 @@ function Aufgabe1()
     println(myArrayMax[2][2])
 end
 
-# Lösung der zweiten Aufgabe
+# Lösung der ersten Aufgabe Exercise 4
+function Aufgabe1()
+    matrixA = [1 2 3; 4 5 6]
+    matrixB = [7 8 9; 10 11 12]
+
+    # Eine etwas gewöhnungsbedürftige Syntax
+    tryAdd = try
+        matrixA + matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    trySub = try
+        matrixA - matrixB
+    catch fehler
+        string("Es kam zu einem Fehler: ",fehler)
+    end
+
+    println(string("Matrix A: ",matrixA))
+    println(string("Matrix B: ",matrixB))
+    println(string("A + B: ",tryAdd))
+    println(string("A - C: ",trySub))
+end
+
+# Lösung der zweiten Aufgabe Exercise 4
 function Aufgabe2()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
     matrixC = [7 8 9; 10 11 12; 13 14 15]
 
-    # Eine etwas gewöhnungsbedürftige Syntax
     firstWayA = try
         # zwei 2x3 Matrizen
         matrixA*matrixB
@@ -71,7 +94,7 @@ function Aufgabe2()
     println(string("A .* B: ",secondWay))
 end
 
-# Lösung der dritten Aufgabe Teil 1
+# Lösung der dritten Aufgabe Teil 1 Exercise 4
 function Aufgabe3a()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
@@ -94,7 +117,7 @@ function Aufgabe3a()
     println(string("A ./ B: ",secondWay))
 end
 
-# Lösung der dritten Aufgabe Teil 2
+# Lösung der dritten Aufgabe Teil 2 Exercise 4
 function Aufgabe3b()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
@@ -117,7 +140,7 @@ function Aufgabe3b()
     println(string("A .\\ B: ",secondWay))
 end
 
-# Lösung der vierten Aufgabe
+# Lösung der vierten Aufgabe Exercise 4
 function Aufgabe4()
     matrixA = [1 2 3; 4 5 6; 7 8 9]
 
@@ -153,7 +176,7 @@ function Aufgabe4()
     println(string("A / 2: ",fourthTask))
 end
 
-# Lösung der fünften Aufgabe
+# Lösung der fünften Aufgabe Exercise 4
 function Aufgabe5()
     # 3 mal 4 Matrix ==> 3 Zeilen, 4 Spalten
     matrixA = [1 2 3 4 ; 5 6 7 8 ; 9 10 11 12]
@@ -179,10 +202,11 @@ function Aufgabe5()
     println(string("Matrix A * Vector C: ",secondWay))
 end
 
+#AufgabeExercise3()
 #Aufgabe1()
 #Aufgabe2()
 #Aufgabe3a()
 #println()
 #Aufgabe3b()
 #Aufgabe4()
-Aufgabe5()
+#Aufgabe5()
