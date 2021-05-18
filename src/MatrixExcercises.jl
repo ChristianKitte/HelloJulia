@@ -6,8 +6,13 @@ MatrixExcercises:
 =#
 
 # https://juliadocs.github.io/Julia-Cheat-Sheet/
+# https://github.com/JuliaLangGerman/Julia_Handbuch_Deutsch
+# https://docs.julialang.org/en/v1/
+# https://docs.julialang.org/en/v1/manual/style-guide/
+#
 # m x n Matrix ==> m Zeilen und n Spalten
 
+# Lösung der ersten Aufgabe
 function Aufgabe1()
     # 16, damit die Zahlen nicht so lang werden....
     # 2x4 ==> 2 Zeilen, 4 Spalten
@@ -31,6 +36,7 @@ function Aufgabe1()
     println(myArrayMax[2][2])
 end
 
+# Lösung der zweiten Aufgabe
 function Aufgabe2()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
@@ -38,12 +44,14 @@ function Aufgabe2()
 
     # Eine etwas gewöhnungsbedürftige Syntax
     firstWayA = try
+        # zwei 2x3 Matrizen
         matrixA*matrixB
     catch fehler
         string("Es kam zu einem Fehler: ",fehler)
     end
 
     firstWayB = try
+        # 2x3 Matrix und eine 3x3 Matrix
         matrixA*matrixC
     catch fehler
         string("Es kam zu einem Fehler: ",fehler)
@@ -63,6 +71,7 @@ function Aufgabe2()
     println(string("A .* B: ",secondWay))
 end
 
+# Lösung der dritten Aufgabe Teil 1
 function Aufgabe3a()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
@@ -85,6 +94,7 @@ function Aufgabe3a()
     println(string("A ./ B: ",secondWay))
 end
 
+# Lösung der dritten Aufgabe Teil 2
 function Aufgabe3b()
     matrixA = [1 2 3; 4 5 6]
     matrixB = [7 8 9; 10 11 12]
@@ -107,6 +117,7 @@ function Aufgabe3b()
     println(string("A .\\ B: ",secondWay))
 end
 
+# Lösung der vierten Aufgabe
 function Aufgabe4()
     matrixA = [1 2 3; 4 5 6; 7 8 9]
 
@@ -142,6 +153,7 @@ function Aufgabe4()
     println(string("A / 2: ",fourthTask))
 end
 
+# Lösung der fünften Aufgabe
 function Aufgabe5()
     # 3 mal 4 Matrix ==> 3 Zeilen, 4 Spalten
     matrixA = [1 2 3 4 ; 5 6 7 8 ; 9 10 11 12]
